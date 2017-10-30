@@ -2,13 +2,11 @@ package model;
 
 import childcare.Teacher;
 
-import javax.sql.DataSource;
 import java.util.List;
 
 
 public interface TeacherDao {
 
-    public void setDataSource(DataSource ds);
 
     //public void insertRecordBad(int id, String name);  //NOT A GOOD PRACTISE
 

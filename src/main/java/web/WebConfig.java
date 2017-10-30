@@ -16,7 +16,7 @@ import org.springframework.context.annotation.ComponentScan;  // ?????
 
 @Configuration
 @EnableWebMvc                                               // Enable Spring MVC
-@ComponentScan("web")                                       // Enable component scanning --> scanning your package for components
+@ComponentScan("controller")                                       // Enable component scanning --> scanning your package for components
 public class WebConfig extends WebMvcConfigurerAdapter {
 
 
