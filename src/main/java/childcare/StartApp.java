@@ -1,4 +1,4 @@
-package childcare;
+/*package childcare;
 
 
 public class StartApp {
@@ -104,4 +104,4 @@ public class StartApp {
 
 
     }
-}
+}*/

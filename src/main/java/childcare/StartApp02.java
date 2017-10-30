@@ -1,4 +1,4 @@
-package childcare;
+/*package childcare;
 
 import model.TeacherDAOImplementation;
 import org.springframework.context.ApplicationContext;
@@ -37,4 +37,4 @@ public class StartApp02 {
     }
 
 
-}
+}*/
