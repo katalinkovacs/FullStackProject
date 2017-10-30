@@ -1,34 +1,40 @@
-/*package childcare;
+package childcare;
 
+import model.TeacherDAOImplementation;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import model.DaoChild;
+import java.util.List;
 
 public class StartApp02 {
 
     public static void main(String[] args) {
 
-        //ChildCare childcare1 = new ChildCare("One Tree", "Altona Meadows");
+        ApplicationContext context = new ClassPathXmlApplicationContext("Bean.xml");
 
-        //DaoChildZoli dao = new DaoChildZoli();
+        TeacherDAOImplementation teacherDAOImp = (TeacherDAOImplementation) context.getBean("teacherDaoImp");
 
-       //Child c1 = new Child(15, "Sebike", 3);
+        //Teacher teacherToInsert = new Teacher(9, "Philippa");    --> WORKING OK
+        //teacherDAOImp.insertRecord(teacherToInsert);             --> WORKING OK
 
-        //dao.insertRecord(c1);
+        Teacher teacherToBeFound = teacherDAOImp.findTeacherById(4);
+        System.out.println("ID IS: " + teacherToBeFound.getId() + ". NAME IS: " + teacherToBeFound.getName());
 
-        //Child c2 = new Child(16, "Katika", 42);
+        System.out.println("---------------------------------------------------");
 
-        //dao.insertRecord(c2);
-       //System.out.println("--------LIST: ");
-        //dao.getAllKidsd();
+        List<Teacher> teacherList = teacherDAOImp.listEveryTeacher();
 
-        DaoChild dao = new DaoChild();
-        dao.checkDbConnection();
-        //dao.insertData();
-        //dao.selectEverythingFromChild();
-        //dao.insertData2(2, "Katus", 33);
-        dao.selectEverythingFromChild();
+        //teacherDAOImp.updateRecordWithArgs(7);                    --> WORKING OK
 
+        //teacherDAOImp.deleteRecord();                             --> WORKING OK
+        //teacherDAOImp.deleteRecordById(1);                        --> WORKING OK
+        //teacherDAOImp.listEveryTeacher();                         --> WORKING OK
+
+        //System.out.println(teacherDAOImp.findTeacherByIdAndName(5, "Simone"));
+        //System.out.println("ID IS: " + teacherDAOImp.findTeacherByIdAndName(5, "Simone").getId());
+        //System.out.println("NAME IS: " + teacherDAOImp.findTeacherByIdAndName(5, "Simone").getName());
 
     }
+
+
 }
-*/

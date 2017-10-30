@@ -10,6 +10,8 @@ public class ChildCare {
     private ArrayList<Child> babyRoom;
     private ArrayList<Child> toddlerRoom;
     private ArrayList<Child> kinderRoom;
+    private ArrayList<Teacher> teacherList;
+
 
 
     // CONSTRUCTORS
@@ -25,6 +27,7 @@ public class ChildCare {
         babyRoom = new ArrayList<Child>();
         toddlerRoom = new ArrayList<Child>();
         kinderRoom = new ArrayList<Child>();
+        teacherList = new ArrayList<Teacher>();
 
     }
 
@@ -87,6 +90,14 @@ public class ChildCare {
     public void setKinderRoom(ArrayList<Child> kinderRoom) {
         //System.out.println("----------------When do I use this?????????????????????????");
         this.kinderRoom = kinderRoom;
+    }
+
+    public ArrayList<Teacher> getTeacherList() {
+        return teacherList;
+    }
+
+    public void setTeacherList(ArrayList<Teacher> teacherList) {
+        this.teacherList = teacherList;
     }
 }
 

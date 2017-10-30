@@ -1,25 +1,17 @@
 package model;
 
-
 import childcare.Child;
 import org.springframework.jdbc.core.JdbcTemplate;
-
 import javax.sql.DataSource;
 import java.util.List;
 
-public class ChildDAOImplementation {
-
-
-//This class must be declared as abstract or implement abstract method????????????????????????????????
-
-    public class ChildDAOImpl implements ChildDAO{
+public class ChildDAOImplementation implements ChildDAO{
 
         private DataSource dataSource;
         private JdbcTemplate jdbcTemplateObject;
 
         public void setDataSource(DataSource dataSource) {
-
-            System.out.println("SetDataSource is invoked!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            //System.out.println("SetDataSource is invoked------------");
             this.dataSource = dataSource;
             this.jdbcTemplateObject = new JdbcTemplate(dataSource);
         }
@@ -30,14 +22,12 @@ public class ChildDAOImplementation {
             jdbcTemplateObject.update(SQL);
             System.out.println("Created Record ID is = " +id +" Name is: " + name + " Age = " + age);
             return;
-
         }
 
         public Child findChildById(int id) {
 
             String SQL = "select * from Child where id = 1";
-            Child child = (Child) jdbcTemplateObject.queryForObject(SQL, new Object[]{id}, new ChildMapper());   // CAST To Childcare.Child????????????
-
+            Child child = (Child) jdbcTemplateObject.queryForObject(SQL, new Object[]{id}, new ChildMapper());
             return child;
 
         }
@@ -46,7 +36,6 @@ public class ChildDAOImplementation {
 
             String SQL = "select * from Child";
             List <Child> children = jdbcTemplateObject.query(SQL, new ChildMapper());
-
             return children;
         }
 
@@ -64,14 +53,7 @@ public class ChildDAOImplementation {
             String SQL = "update Child set age = 11 where id = 16";
             jdbcTemplateObject.update(SQL);
             System.out.println("Updated Record with ID = " + id );
-
             return;
         }
 
     }
-
-
-
-
-
-}

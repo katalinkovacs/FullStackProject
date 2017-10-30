@@ -6,8 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-//public class ChildMapper implements RowMapper<Child>{          //??????????????????????????????
-
 public class ChildMapper implements RowMapper{
 
     public Child mapRow(ResultSet rs, int rowNum) throws SQLException {
