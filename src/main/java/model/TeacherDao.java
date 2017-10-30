@@ -8,15 +8,11 @@ import java.util.List;
 
 public interface TeacherDao {
 
-    public void setDataSource(DataSource ds);          //????????????????????????????????????
+    public void setDataSource(DataSource ds);
 
-    public void createTeacherTable();  // NOT USED
+    //public void insertRecordBad(int id, String name);  //NOT A GOOD PRACTISE
 
-    public void deleteTeacherTable();  // NOT USED
-
-    public void insertRecord(int id, String name);  //NOT A GOOD PRACTISE
-
-    public void insertRecordVersion2(Teacher teacher);
+    public void insertRecord(Teacher teacher);
 
     public Teacher findTeacherById(int id);
 
