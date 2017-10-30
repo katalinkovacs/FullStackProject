@@ -73,6 +73,35 @@ public class StartApp {
 
         }
 
+        Teacher teacher1 = new Teacher(1, "Besset");
+        Teacher teacher2 = new Teacher(2, "Simone");
+        Teacher teacher3 = new Teacher(3, "Rhonda");
+        Teacher teacher4 = new Teacher(4, "Jill");
+        Teacher teacher5 = new Teacher(5, "Karen");
+        Teacher teacher6 = new Teacher(6, "Ruby");
+        Teacher teacher7 = new Teacher(7, "Connie");
+        Teacher teacher8 = new Teacher(8, "Philippa");
+        Teacher teacher9 = new Teacher(9, "Melissa");
+
+        childcare1.getTeacherList().add(teacher1);
+        childcare1.getTeacherList().add(teacher2);
+        childcare1.getTeacherList().add(teacher3);
+        childcare1.getTeacherList().add(teacher4);
+        childcare1.getTeacherList().add(teacher5);
+        childcare1.getTeacherList().add(teacher6);
+        childcare1.getTeacherList().add(teacher7);
+        childcare1.getTeacherList().add(teacher8);
+        childcare1.getTeacherList().add(teacher9);
+
+        System.out.println("Looping through Teacher list---------------------------------");
+        for (Teacher currentTeacher : childcare1.getTeacherList()) {
+
+            System.out.println(currentTeacher.getName());
+
+        }
+
+
+
 
     }
 }
