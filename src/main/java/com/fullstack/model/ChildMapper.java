@@ -12,8 +12,8 @@ public class ChildMapper implements RowMapper{
 
         Child child = new Child();
         child.setId(rs.getInt("id"));
-        child.setName(rs.getString("name"));
-        child.setAge(rs.getInt("age"));
+        child.setFullName(rs.getString("fullName"));
+        child.setAgeMonth(rs.getInt("ageMonth"));
 
         return child;
     }

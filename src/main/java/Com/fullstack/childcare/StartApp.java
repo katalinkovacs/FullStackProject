@@ -35,15 +35,15 @@ public class StartApp {
         System.out.println("Looping through kids list");
         for (Child currentChild : childcare1.getKidsInChildCare()) {
 
-            System.out.println(currentChild.getName());
+            System.out.println(currentChild.getFullName());
 
-            if (currentChild.getAge() < 24) {
+            if (currentChild.getAgeMonth() < 24) {
                 childcare1.getBabyRoom().add(currentChild);
                 //System.out.println("Baby room");
-            } else if (currentChild.getAge() >= 24 && currentChild.getAge() <= 34) {
+            } else if (currentChild.getAgeMonth() >= 24 && currentChild.getAgeMonth() <= 34) {
                 childcare1.getToddlerRoom().add(currentChild);
                 //System.out.println("Toddler room");
-            } else if (currentChild.getAge() > 35) {
+            } else if (currentChild.getAgeMonth() > 35) {
                 childcare1.getKinderRoom().add(currentChild);
                 //System.out.println("Kinder room");
             } else {
@@ -55,21 +55,21 @@ public class StartApp {
         System.out.println("Looping through babies list---------------------------------");
         for (Child currentChild : childcare1.getBabyRoom()) {
 
-            System.out.println(currentChild.getName());
+            System.out.println(currentChild.getFullName());
 
         }
 
         System.out.println("Looping through toddler list---------------------------------");
         for (Child currentChild : childcare1.getToddlerRoom()) {
 
-            System.out.println(currentChild.getName());
+            System.out.println(currentChild.getFullName());
 
         }
 
         System.out.println("Looping through kinder list---------------------------------");
         for (Child currentChild : childcare1.getKinderRoom()) {
 
-            System.out.println(currentChild.getName());
+            System.out.println(currentChild.getFullName());
 
         }
 

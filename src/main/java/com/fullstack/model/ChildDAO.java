@@ -9,12 +9,12 @@ public interface ChildDAO {
     //public void setDataSource(DataSource ds);
 
     // METHOD to INSERT a record in the Child table.
-    public void insertRecord(int id, String name, int age);
+    public void insertRecord(int id, String fullName, int ageMonth);
 
     // METHOD to LIST a record from the Child table by id.
     public Child findChildById(int id);
 
-    public Child findChildByName(String name);
+    public Child findChildByName(String fullName);
 
     // METHOD to LIST all records from the Child table.
     public List<Child> listAllChildren();

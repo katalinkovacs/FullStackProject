@@ -12,14 +12,14 @@
     <table border="1">
         <tr>
             <th>Child Id</th>
-            <th>Child Name</th>
-            <th>Child Age</th>
+            <th>Child FullName</th>
+            <th>Child AgeMonth</th>
         </tr>
         <c:forEach items="${children}" var="currentChild">
             <tr>
                 <td>${currentChild.id}</td>
-                <td>${currentChild.name}</td>
-                <td>${currentChild.age}</td>
+                <td>${currentChild.fullName}</td>
+                <td>${currentChild.ageMonth}</td>
             </tr>
         </c:forEach>
     </table>

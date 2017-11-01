@@ -3,8 +3,8 @@ package com.fullstack.childcare;
 public class Child {
 
     private int id;
-    private String name;
-    private int age;
+    private String fullName;
+    private int ageMonth;
 
 
     // CONSTRUCTORS
@@ -13,10 +13,10 @@ public class Child {
         //System.out.println("------------------Empty CONSTRUCTOR-----------------");
     }
 
-    public Child(int id, String name, int age) {
+    public Child(int id, String fullName, int ageMonth) {
         this.id = id;
-        this.name = name;
-        this.age = age;
+        this.fullName = fullName;
+        this.ageMonth = ageMonth;
         //System.out.println("------------------3 argument CONSTRUCTOR-----------------");
     }
 
@@ -32,24 +32,24 @@ public class Child {
 
         this.id = id;
     }
-    public String getName() {
+    public String getFullName() {
 
-        return name;
+        return fullName;
     }
 
-    public void setName(String name) {
+    public void setFullName(String fullName) {
 
-        this.name = name;
+        this.fullName = fullName;
     }
 
-    public int getAge() {
+    public int getAgeMonth() {
 
-        return age;
+        return ageMonth;
     }
 
-    public void setAge(int age) {
+    public void setAgeMonth(int ageMonth) {
 
-        this.age = age;
+        this.ageMonth = ageMonth;
     }
 
 

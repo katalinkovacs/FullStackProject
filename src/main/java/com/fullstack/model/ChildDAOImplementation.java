@@ -31,12 +31,12 @@ public class ChildDAOImplementation implements ChildDAO{
         }
 */
 
-        public void insertRecord(int id, String name, int age) {
+        public void insertRecord(int id, String fullName, int ageMonth) {
 
-            String SQL = "insert into Child (id, name, age) values (id, name, age)";
+            String SQL = "insert into Child (id, fullName, ageMonth) values (id, fullName, ageMonth)";
             //jdbcTemplateObject.update(SQL);
             jdbcOperations.update(SQL);
-            System.out.println("Created Record ID is = " +id +" Name is: " + name + " Age = " + age);
+            System.out.println("Created Record ID is = " +id +" Name is: " + fullName + " Age = " + ageMonth);
             return;
         }
 
@@ -50,11 +50,11 @@ public class ChildDAOImplementation implements ChildDAO{
 
         }
 
-        public Child findChildByName(String name) {
-            
-            String SQL = "SELECT * from Child WHERE name = ?";
+        public Child findChildByName(String fullName) {
+
+            String SQL = "SELECT * from Child WHERE fullName = ?";
             //Child child = (Child) jdbcTemplateObject.queryForObject(SQL, new Object[]{id}, new ChildMapper());
-            Child child = (Child) jdbcOperations.queryForObject(SQL, new Object[]{name}, new ChildMapper());
+            Child child = (Child) jdbcOperations.queryForObject(SQL, new Object[]{fullName}, new ChildMapper());
 
             return child;
 
@@ -76,7 +76,7 @@ public class ChildDAOImplementation implements ChildDAO{
 
         System.out.println("Looping through ChildrenList:");
         for (Child currentChild : childrenList) {
-            System.out.println("ID is: " + currentChild.getId() +", Name is: " + currentChild.getName() +", Age is: " + currentChild.getAge() );
+            System.out.println("ID is: " + currentChild.getId() +", Name is: " + currentChild.getFullName() +", Age is: " + currentChild.getAgeMonth() +" months" );
 
         }
 
@@ -100,7 +100,7 @@ public class ChildDAOImplementation implements ChildDAO{
 
         public void updateRecord(int id){
 
-            String SQL = "update Child set age = 11 where id = 16";
+            String SQL = "update Child set ageMonth = 11 where id = 16";
             //jdbcTemplateObject.update(SQL);
             jdbcOperations.update(SQL);
             System.out.println("Updated Record with ID = " + id );
