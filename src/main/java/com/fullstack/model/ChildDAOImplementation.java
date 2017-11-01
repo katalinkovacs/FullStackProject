@@ -50,13 +50,32 @@ public class ChildDAOImplementation implements ChildDAO{
 
         }
 
-        public List<Child> listAllChildren() {
+    /*    public List<Child> listAllChildren() {
 
             String SQL = "select * from Child";
             //List <Child> children = jdbcTemplateObject.query(SQL, new ChildMapper());
             List <Child> children = jdbcOperations.query(SQL, new ChildMapper());
             return children;
+
+        }*/
+
+        public List<Child> listAllChildren() {
+
+        String SQL = "SELECT * from Child";
+        List <Child> childrenList = jdbcOperations.query(SQL, new ChildMapper());
+
+        System.out.println("Looping through ChildrenList:");
+        for (Child currentChild : childrenList) {
+            System.out.println("ID is: " + currentChild.getId() +", Name is: " + currentChild.getName() +", Age is: " + currentChild.getAge() );
+
         }
+
+        return childrenList;
+    }
+
+
+
+
 
         public void deleteRecord(int id) {
 
