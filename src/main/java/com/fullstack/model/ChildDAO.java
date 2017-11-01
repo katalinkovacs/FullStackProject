@@ -14,6 +14,8 @@ public interface ChildDAO {
     // METHOD to LIST a record from the Child table by id.
     public Child findChildById(int id);
 
+    public Child findChildByName(String name);
+
     // METHOD to LIST all records from the Child table.
     public List<Child> listAllChildren();
 

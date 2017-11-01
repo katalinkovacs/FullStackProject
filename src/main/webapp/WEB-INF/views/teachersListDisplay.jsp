@@ -23,5 +23,9 @@
         </c:forEach>
     </table>
 
+    <%
+        System.out.println("Java in teachersListDisplay.JSP");
+    %>
+
 </body>
 </html>

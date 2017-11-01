@@ -24,5 +24,8 @@
         </c:forEach>
     </table>
 
+    <%
+       System.out.println("Java in childrenListDisplay.JSP");
+    %>
 </body>
 </html>

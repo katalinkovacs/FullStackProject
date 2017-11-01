@@ -50,6 +50,16 @@ public class ChildDAOImplementation implements ChildDAO{
 
         }
 
+        public Child findChildByName(String name) {
+            
+            String SQL = "SELECT * from Child WHERE name = ?";
+            //Child child = (Child) jdbcTemplateObject.queryForObject(SQL, new Object[]{id}, new ChildMapper());
+            Child child = (Child) jdbcOperations.queryForObject(SQL, new Object[]{name}, new ChildMapper());
+
+            return child;
+
+        }
+
     /*    public List<Child> listAllChildren() {
 
             String SQL = "select * from Child";
