@@ -1,12 +1,12 @@
 package com.fullstack.model;
 
 import com.fullstack.childcare.Child;
-import javax.sql.DataSource;
+//import javax.sql.DataSource;
 import java.util.List;
 
 public interface ChildDAO {
 
-    public void setDataSource(DataSource ds);
+    //public void setDataSource(DataSource ds);
 
     // METHOD to INSERT a record in the Child table.
     public void insertRecord(int id, String name, int age);
