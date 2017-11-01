@@ -15,7 +15,7 @@
             <th>Child Name</th>
             <th>Child Age</th>
         </tr>
-        <c:forEach items="${childrenList}" var="currentChild">
+        <c:forEach items="${children}" var="currentChild">
             <tr>
                 <td>${currentChild.id}</td>
                 <td>${currentChild.name}</td>
