@@ -9,7 +9,9 @@ public interface ChildDAO {
     //public void setDataSource(DataSource ds);
 
     // METHOD to INSERT a record in the Child table.
-    public void insertRecord(int id, String fullName, int ageMonth);
+    //public void insertRecord(int id, String fullName, int ageMonth);  --> NOT A GOOD PRACTISE
+
+    public void insertRecord(Child child);
 
     // METHOD to LIST a record from the Child table by id.
     public Child findChildById(int id);

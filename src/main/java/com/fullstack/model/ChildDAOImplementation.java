@@ -31,7 +31,7 @@ public class ChildDAOImplementation implements ChildDAO{
         }
 */
 
-        public void insertRecord(int id, String fullName, int ageMonth) {
+/*        public void insertRecord(int id, String fullName, int ageMonth) {
 
             String SQL = "insert into Child (id, fullName, ageMonth) values (id, fullName, ageMonth)";
             //jdbcTemplateObject.update(SQL);
@@ -39,6 +39,17 @@ public class ChildDAOImplementation implements ChildDAO{
             System.out.println("Created Record ID is = " +id +" Name is: " + fullName + " Age = " + ageMonth);
             return;
         }
+*/
+
+        public void insertRecord(Child child) {
+
+            //String sql = "INSERT INTO Child (id, Name, Age) VALUES (" + c.getId() + ", \"" + c.getName() + "\"," + c.getAge() + ")";
+            String sql = "INSERT INTO Child (id, fullName, ageMonth) VALUES (" + child.getId() + ",     \"" + child.getFullName() + "\"," + child.getAgeMonth() + ")";
+            jdbcOperations.update(sql);
+            //System.out.println("Created Record ID is = " +child.getId() +" Name is: " + child.getFullName());
+            return;
+        }
+
 
         public Child findChildById(int id) {
 
@@ -71,20 +82,17 @@ public class ChildDAOImplementation implements ChildDAO{
 
         public List<Child> listAllChildren() {
 
-        String SQL = "SELECT * from Child";
-        List <Child> childrenList = jdbcOperations.query(SQL, new ChildMapper());
+            String SQL = "SELECT * from Child";
+            List <Child> childrenList = jdbcOperations.query(SQL, new ChildMapper());
 
-        System.out.println("Looping through ChildrenList:");
-        for (Child currentChild : childrenList) {
+            System.out.println("Looping through ChildrenList:");
+            for (Child currentChild : childrenList) {
             System.out.println("ID is: " + currentChild.getId() +", Name is: " + currentChild.getFullName() +", Age is: " + currentChild.getAgeMonth() +" months" );
 
         }
 
-        return childrenList;
-    }
-
-
-
+            return childrenList;
+        }
 
 
         public void deleteRecord(int id) {
@@ -107,4 +115,4 @@ public class ChildDAOImplementation implements ChildDAO{
             return;
         }
 
-    }
+}

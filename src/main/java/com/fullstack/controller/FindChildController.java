@@ -23,29 +23,19 @@ public class FindChildController {
     }
 
     @RequestMapping( method = GET )
-    public String welcome(Model model) {
+    public String findChild(Model model) {
 
         return "childToBeFoundByName";
     }
 
     @RequestMapping( method = POST )
-    public String afterSubmit(Child formData, Model model) {
-
-
-        //model.addAttribute("Id", formData.getId());
+    public String foundChild(Child formData, Model model) {
 
         String name = formData.getFullName();
-
-
         Child childObject = childDAOImplementation.findChildByName(name);
-        //List<Child> childrenList =  childDAOImplementation.listAllChildren();
-
         model.addAttribute("child" , childObject);
 
-        //childDAOImplementation.findChildByName(formData.getName());
-
-
-        return "foundChildDetails";              // View name
+        return "foundChildDetails";
     }
 
 

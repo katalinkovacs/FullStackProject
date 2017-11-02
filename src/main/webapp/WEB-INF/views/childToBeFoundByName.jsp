@@ -14,8 +14,6 @@
 
   <%
      System.out.println("Java in childToBeFoundByName.JSP");
-     System.out.println("The name of the child is: " +request.getParameter("childName"));
-
   %>
 
 
