@@ -1,6 +1,6 @@
-package com.fullstack.model;
+package co.fullstack.model;
 
-import com.fullstack.childcare.Teacher;
+import co.fullstack.childcare.Teacher;
 
 import java.util.List;
 

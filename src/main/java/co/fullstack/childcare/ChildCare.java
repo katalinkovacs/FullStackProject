@@ -1,4 +1,4 @@
-package com.fullstack.childcare;
+package co.fullstack.childcare;
 
 import java.util.ArrayList;
 

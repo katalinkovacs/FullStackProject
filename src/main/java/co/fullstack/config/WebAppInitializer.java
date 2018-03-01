@@ -1,7 +1,7 @@
-package com.fullstack.config;
+package co.fullstack.config;
 
+import co.fullstack.web.WebConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-import com.fullstack.web.WebConfig;
 
 // FIRST STEP IN TOMCAT WEBCONTAINER - STARTING POINT!!!!!!!!!!!!!!!!!!!!!!!
 

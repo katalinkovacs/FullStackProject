@@ -1,6 +1,6 @@
-package com.fullstack.model;
+package co.fullstack.model;
 
-import com.fullstack.childcare.Child;
+import co.fullstack.childcare.Child;
 //import javax.sql.DataSource;
 import java.util.List;
 

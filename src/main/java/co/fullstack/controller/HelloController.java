@@ -1,6 +1,6 @@
-package com.fullstack.controller;
+package co.fullstack.controller;
 
-import com.fullstack.model.TeacherDAOImplementation;
+import co.fullstack.model.TeacherDAOImplementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

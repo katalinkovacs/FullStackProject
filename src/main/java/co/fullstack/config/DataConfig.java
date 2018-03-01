@@ -1,4 +1,4 @@
-package com.fullstack.config;
+package co.fullstack.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.core.JdbcOperations;

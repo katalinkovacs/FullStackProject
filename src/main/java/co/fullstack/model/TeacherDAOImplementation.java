@@ -1,6 +1,6 @@
-package com.fullstack.model;
+package co.fullstack.model;
 
-import com.fullstack.childcare.Teacher;
+import co.fullstack.childcare.Teacher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.stereotype.Repository;
