@@ -16,9 +16,12 @@ public class DataConfig {
 
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://localhost/katidb");
-        ds.setUsername("admin");
-        ds.setPassword("admin");
+        //ds.setUrl("jdbc:mysql://localhost/katidb");
+        //ds.setUsername("admin");
+        //ds.setPassword("admin");
+        ds.setUrl("jdbc:mysql://localhost/fullstackprojectdata");
+        ds.setUsername("root");
+        ds.setPassword("mysql");
         return ds;
 
     }
