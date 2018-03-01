@@ -14,7 +14,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @Configuration
 @EnableWebMvc                                               // Enable Spring MVC
-@ComponentScan("com/fullstack/controller")  // It scans the controller package for components/ CONTROLLERS!!!!!
+@ComponentScan("com.fullstack.controller")  // It scans the controller package for components/ CONTROLLERS!!!!!
 public class WebConfig extends WebMvcConfigurerAdapter {
 
 
