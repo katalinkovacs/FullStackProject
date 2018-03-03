@@ -12,17 +12,17 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 public class HelloController {
 
 
-    private TeacherDAOImplementation teacherDAOImplementation;
+    //private TeacherDAOImplementation teacherDAOImplementation;
 
-    @Autowired
+    /*@Autowired
     public HelloController(TeacherDAOImplementation teacherDAOImplementation) {
         this.teacherDAOImplementation = teacherDAOImplementation;
     }
-
+*/
     @RequestMapping( method = GET )
     public String hi() {
 
-        teacherDAOImplementation.listEveryTeacher();
+        //teacherDAOImplementation.listEveryTeacher();
 
         return "hello";
     }

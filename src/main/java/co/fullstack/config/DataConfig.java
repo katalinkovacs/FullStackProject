@@ -15,13 +15,13 @@ public class DataConfig {
         System.out.println("In DataConfig CLASS - dataSource METHOD ***************** Datasource created ");
 
         DriverManagerDataSource ds = new DriverManagerDataSource();
-        ds.setDriverClassName("com.mysql.jdbc.Driver");
+        ds.setDriverClassName("${driverclassName}");
         //ds.setUrl("jdbc:mysql://localhost/katidb");
         //ds.setUsername("admin");
         //ds.setPassword("admin");
-        ds.setUrl("jdbc:mysql://localhost/fullstackprojectdata");
-        ds.setUsername("root");
-        ds.setPassword("mysql");
+        ds.setUrl("${dbUrl}");
+        ds.setUsername("${dbUser}");
+        ds.setPassword("${dbPassword}");
         return ds;
 
     }

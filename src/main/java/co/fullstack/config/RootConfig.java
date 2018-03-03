@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 @Configuration
 @Import(DataConfig.class)    // SpringContext injected with the contents of DataConfig AKA Beans!!!
 // SPRING scans everything in com.fullstack.model package that has @Repository --> creates a java class
-@ComponentScan(basePackages = "com/fullstack/model",
+@ComponentScan(basePackages = "co.fullstack",
         excludeFilters={
                 @ComponentScan.Filter(type= FilterType.CUSTOM, value= RootConfig.WebPackage.class)
         })
@@ -25,7 +25,7 @@ public class RootConfig {
 
         public WebPackage() {
 
-            super(Pattern.compile("com.fullstack/web"));
+            super(Pattern.compile("co.fullstack/web"));
             System.out.print("In RootConfig CLASS - WebPackage METHOD *****************");
 
 
