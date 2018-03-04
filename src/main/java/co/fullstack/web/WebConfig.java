@@ -12,9 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ComponentScan;
 
 
-/**
- * This class is automatically gets processed by servlet container
- */
+
 @Configuration
 @EnableWebMvc                                               // Enable Spring MVC
 @ComponentScan("co.fullstack.controller")  // It scans the controller package for components/ CONTROLLERS!!!!!
