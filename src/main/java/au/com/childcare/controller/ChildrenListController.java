@@ -1,7 +1,7 @@
-package co.fullstack.controller;
+package au.com.childcare.controller;
 
-import co.fullstack.childcare.Child;
-import co.fullstack.model.ChildDAOImplementation;
+import au.com.childcare.dao.ChildDAOImplementation;
+import au.com.childcare.dataobject.Child;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,12 +13,13 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @Controller
 @RequestMapping(value = "/childrendisplay")
-public class ChildrenController {
+public class ChildrenListController {
 
+    //Reference
     private ChildDAOImplementation childDAOImplementation;
 
     @Autowired
-    public ChildrenController(ChildDAOImplementation childDAOImplementation) {
+    public ChildrenListController(ChildDAOImplementation childDAOImplementation) {
 
         this.childDAOImplementation = childDAOImplementation;
     }

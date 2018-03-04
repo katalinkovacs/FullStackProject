@@ -1,4 +1,4 @@
-package co.fullstack.childcare;
+package au.com.childcare.dataobject;
 
 public class Child {
 

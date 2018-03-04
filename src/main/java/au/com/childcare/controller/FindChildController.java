@@ -1,7 +1,7 @@
-package co.fullstack.controller;
+package au.com.childcare.controller;
 
-import co.fullstack.childcare.Child;
-import co.fullstack.model.ChildDAOImplementation;
+import au.com.childcare.dataobject.Child;
+import au.com.childcare.dao.ChildDAOImplementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

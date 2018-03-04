@@ -1,6 +1,6 @@
-package co.fullstack.model;
+package au.com.childcare.dao;
 
-import co.fullstack.childcare.Child;
+import au.com.childcare.dataobject.Child;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.stereotype.Repository;

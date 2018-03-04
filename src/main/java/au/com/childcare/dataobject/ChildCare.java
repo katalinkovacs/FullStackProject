@@ -1,4 +1,4 @@
-package co.fullstack.childcare;
+package au.com.childcare.dataobject;
 
 import java.util.ArrayList;
 
@@ -23,7 +23,7 @@ public class ChildCare {
 
         this.name = name;
         this.suburb = suburb;
-        kidsInChildCare = new ArrayList<Child>();
+        kidsInChildCare = new ArrayList<Child>();      //When a ChildCare created it also creates an empty kidsInChildCare arrayList
         babyRoom = new ArrayList<Child>();
         toddlerRoom = new ArrayList<Child>();
         kinderRoom = new ArrayList<Child>();

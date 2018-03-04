@@ -1,4 +1,4 @@
-package co.fullstack.web;
+package au.com.childcare.web;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.ViewResolver;
@@ -11,10 +11,10 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ComponentScan;
 
-
+// spring mvc configuration
 @Configuration
 @EnableWebMvc                                               // Enable Spring MVC
-@ComponentScan("co.fullstack.controller")  // It scans the controller package for components/ CONTROLLERS!!!!!
+@ComponentScan("au.com/childcare/controller")  // It scans the controller package for components/ CONTROLLERS!!!!!
 public class WebConfig extends WebMvcConfigurerAdapter {
 
 
@@ -50,3 +50,5 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
 
 }
+
+

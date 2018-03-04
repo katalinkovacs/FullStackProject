@@ -1,6 +1,6 @@
-package co.fullstack.model;
+package au.com.childcare.dao;
 
-import co.fullstack.childcare.Teacher;
+import au.com.childcare.dataobject.Teacher;
 
 import java.util.List;
 

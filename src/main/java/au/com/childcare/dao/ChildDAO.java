@@ -1,6 +1,6 @@
-package co.fullstack.model;
+package au.com.childcare.dao;
 
-import co.fullstack.childcare.Child;
+import au.com.childcare.dataobject.Child;
 //import javax.sql.DataSource;
 import java.util.List;
 

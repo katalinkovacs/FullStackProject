@@ -1,6 +1,6 @@
-package co.fullstack.childcare;
+package au.com.childcare.dataobject;
 
-import co.fullstack.model.TeacherDAOImplementation;
+import au.com.childcare.dao.TeacherDAOImplementation;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

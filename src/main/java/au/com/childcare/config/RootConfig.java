@@ -1,4 +1,4 @@
-package co.fullstack.config;
+package au.com.childcare.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -11,8 +11,8 @@ import java.util.regex.Pattern;
 // EVERYTHING IS SPRING
 @Configuration
 @Import(DataConfig.class)    // SpringContext injected with the contents of DataConfig AKA Beans!!!
-// SPRING scans everything in com.fullstack.model package that has @Repository --> creates a java class
-@ComponentScan(basePackages = "com/fullstack/model",
+// SPRING scans everything in co.fullstack.dao package that has @Repository --> creates a java class
+@ComponentScan(basePackages = "au.com/childcare/dao",
         excludeFilters={
                 @ComponentScan.Filter(type= FilterType.CUSTOM, value= RootConfig.WebPackage.class)
         })
@@ -25,7 +25,7 @@ public class RootConfig {
 
         public WebPackage() {
 
-            super(Pattern.compile("com.fullstack/web"));
+            super(Pattern.compile("co/fullstack/web"));
             System.out.print("In RootConfig CLASS - WebPackage METHOD *****************");
 
 

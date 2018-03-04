@@ -1,6 +1,6 @@
-package co.fullstack.controller;
+package au.com.childcare.controller;
 
-import co.fullstack.model.TeacherDAOImplementation;
+import au.com.childcare.dao.TeacherDAOImplementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
