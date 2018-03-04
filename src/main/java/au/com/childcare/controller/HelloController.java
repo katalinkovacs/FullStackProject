@@ -1,6 +1,5 @@
 package au.com.childcare.controller;
 
-import au.com.childcare.dao.TeacherDAOImplementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,17 +11,17 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 public class HelloController {
 
 
-    private TeacherDAOImplementation teacherDAOImplementation;
+    //private TeacherDAOImplementation teacherDAOImplementation;
 
-    @Autowired
-    public HelloController(TeacherDAOImplementation teacherDAOImplementation) {
-        this.teacherDAOImplementation = teacherDAOImplementation;
-    }
+    //@Autowired
+    //public HelloController(TeacherDAOImplementation teacherDAOImplementation) {
+   //     this.teacherDAOImplementation = teacherDAOImplementation;
+    //}
 
     @RequestMapping( method = GET )
     public String hi() {
 
-        teacherDAOImplementation.listEveryTeacher();
+        //teacherDAOImplementation.listEveryTeacher();
 
         return "hello";
     }

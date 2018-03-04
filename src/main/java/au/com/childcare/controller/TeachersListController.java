@@ -12,14 +12,14 @@ import java.util.List;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @Controller
-@RequestMapping(value = "/teachersdisplay")
-public class TeachersController {
+@RequestMapping(value = "/teacherslistdisplay")
+public class TeachersListController {
 
 
     private TeacherDAOImplementation teacherDAOImplementation;
 
     @Autowired
-    public TeachersController(TeacherDAOImplementation teacherDAOImplementation) {
+    public TeachersListController(TeacherDAOImplementation teacherDAOImplementation) {
 
         this.teacherDAOImplementation = teacherDAOImplementation;
     }

@@ -12,7 +12,7 @@ import java.util.List;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @Controller
-@RequestMapping(value = "/childrendisplay")
+@RequestMapping(value = "/childrenlistdisplay")
 public class ChildrenListController {
 
     //Reference
