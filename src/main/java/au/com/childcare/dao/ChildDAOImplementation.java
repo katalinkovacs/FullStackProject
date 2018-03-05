@@ -9,11 +9,11 @@ import java.util.List;
 
 @Repository
 public class ChildDAOImplementation implements ChildDAO{
-
+        // ChildDAOImplementation must have JdbcOperations!!!
         private JdbcOperations jdbcOperations;
 
         @Autowired
-        public ChildDAOImplementation(JdbcOperations jdbcOperations) {  // ChildDAOImplementation must have JdbcOperations!!!
+        public ChildDAOImplementation(JdbcOperations jdbcOperations) {
 
             this.jdbcOperations = jdbcOperations;
         }
@@ -105,12 +105,16 @@ public class ChildDAOImplementation implements ChildDAO{
 
         }
 
-        public void updateRecord(int id){
+        public void updateRecord(int id, int ageMonth){
 
-            String SQL = "update Child set ageMonth = 11 where id = 16";
+            //Sample --> String SQL = "SELECT * from Child WHERE fullName = ?";
+            //Old   -->  String SQL = "update Child set ageMonth = 11 where id = 16";
+            String SQL = "update Child set ageMonth = ? where id = ?";
+            //String sql = "INSERT INTO Child (id, fullName, ageMonth) VALUES (" + child.getId() + ",     \"" + child.getFullName() + "\"," + child.getAgeMonth() + ")";
+
             //jdbcTemplateObject.update(SQL);
             jdbcOperations.update(SQL);
-            System.out.println("Updated Record with ID = " + id );
+            //System.out.println("Updated Record with ID = " + id );
             return;
         }
 

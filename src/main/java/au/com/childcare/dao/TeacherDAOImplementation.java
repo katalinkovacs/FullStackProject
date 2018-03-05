@@ -9,13 +9,11 @@ import java.util.List;
 
 @Repository
 public class TeacherDAOImplementation implements TeacherDao {
-
-
-
+    // TeacherDAOImplementation must have JdbcOperations!!!
     private JdbcOperations jdbcOperations;
 
     @Autowired
-    public TeacherDAOImplementation(JdbcOperations jdbcOperations) {        // TeacherDAOImplementation has to have JdbcOperations!!!
+    public TeacherDAOImplementation(JdbcOperations jdbcOperations) {
 
         this.jdbcOperations = jdbcOperations;
     }

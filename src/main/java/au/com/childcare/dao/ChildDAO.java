@@ -25,6 +25,6 @@ public interface ChildDAO {
     public void deleteRecord(int id);
 
     // METHOD to UPDATE a record in the Child table.
-    public void updateRecord(int id);
+    public void updateRecord(int id, int ageMonth);
 
 }
