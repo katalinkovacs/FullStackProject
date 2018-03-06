@@ -52,7 +52,7 @@ public class ChildDAOImplementation implements ChildDAO{
 
         public Child findChildById(int id) {
 
-            String SQL = "select * from Child where id = 1";
+            String SQL = "select * from Child where id = ?";
             //Child child = (Child) jdbcTemplateObject.queryForObject(SQL, new Object[]{id}, new ChildMapper());
             Child child = (Child) jdbcOperations.queryForObject(SQL, new Object[]{id}, new ChildMapper());
 
