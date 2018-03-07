@@ -11,14 +11,14 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 @Controller
-@RequestMapping(value = "/findchild")
-public class FindChildController {
+@RequestMapping(value = "/findchildbyname")
+public class FindChildByNameController {
 
     //Reference
     private ChildDAOImplementation childDAOImplementation;
 
     @Autowired
-    public FindChildController(ChildDAOImplementation childDAOImplementation) {
+    public FindChildByNameController(ChildDAOImplementation childDAOImplementation) {
 
         this.childDAOImplementation = childDAOImplementation;
     }
@@ -34,7 +34,7 @@ public class FindChildController {
 
         String name = formData.getFullName();
         Child childObject = childDAOImplementation.findChildByName(name);
-        model.addAttribute("child" , childObject);
+        model.addAttribute("child" , childObject);  // name, value
 
         return "foundChildDetails";
     }

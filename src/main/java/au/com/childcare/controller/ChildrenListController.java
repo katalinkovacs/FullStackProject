@@ -11,8 +11,12 @@ import java.util.List;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
-@Controller
-@RequestMapping(value = "/childrenlistdisplay")
+/*Because ChildrenListController is annotated with @Controller,
+ the component scanner will automatically pick up ChildrenListController
+ and declare it as a bean in the Spring application context.
+*/
+@Controller    //Declared to be a controller
+@RequestMapping(value = "/childrenlistdisplay")   //Handle GET requests for /childrenlistdisplay
 public class ChildrenListController {
 
     //Reference
@@ -30,7 +34,7 @@ public class ChildrenListController {
         List<Child> childrenList =  childDAOImplementation.listAllChildren();
 
         model.addAttribute("children", childrenList);
-        return "childrenListDisplay";
+        return "childrenListDisplay";     // View name is childrenListDisplay
     }
 
 

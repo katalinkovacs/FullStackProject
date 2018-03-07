@@ -20,5 +20,10 @@
 
   <h1 align="center">Welcome!</h1>
 
+
+  <a href="<c:url value="http://localhost:8080/fullstackproject/findchild" />">find a child</a> |
+  <a href="<c:url value="/findteacher" />">find a teacher</a>
+
+
   </body>
 </html>

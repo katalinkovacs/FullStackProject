@@ -1,28 +1,28 @@
 package au.com.childcare.dataobject;
 
-import au.com.childcare.dao.TeacherDAOImplementation;
+import au.com.childcare.dao.ChildDAOImplementation;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.util.List;
 
-public class StartApp02 {
+
+public class StartAppForTest {
 
     public static void main(String[] args) {
 
-        System.out.println("Main started.......................");
-
         ApplicationContext context = new ClassPathXmlApplicationContext("Bean.xml");
 
-        TeacherDAOImplementation teacherDAOImp = (TeacherDAOImplementation) context.getBean("teacherDaoImp");
+        ChildDAOImplementation childDAOImplementation = (ChildDAOImplementation) context.getBean("childDaoImp");
 
-        Teacher teacherToInsert = new Teacher(8, "PhilippaTest");   // --> WORKING OK
-        teacherDAOImp.insertRecord(teacherToInsert);             //--> WORKING OK
+        Child childTestToInsert = new Child(12, "TestName", 11);
+        childDAOImplementation.insertRecord(childTestToInsert);
+        //Teacher teacherToInsert = new Teacher(9, "Philippa");    --> WORKING OK
+        //teacherDAOImp.insertRecord(teacherToInsert);             --> WORKING OK
 
         //Teacher teacherToBeFound = teacherDAOImp.findTeacherById(4);
         //System.out.println("ID IS: " + teacherToBeFound.getId() + ". NAME IS: " + teacherToBeFound.getName());
 
-        System.out.println("---------------------------------------------------");
+        //System.out.println("---------------------------------------------------");
 
         //List<Teacher> teacherList = teacherDAOImp.listEveryTeacher();
 
@@ -37,6 +37,5 @@ public class StartApp02 {
         //System.out.println("NAME IS: " + teacherDAOImp.findTeacherByIdAndName(5, "Simone").getName());
 
     }
-
 
 }

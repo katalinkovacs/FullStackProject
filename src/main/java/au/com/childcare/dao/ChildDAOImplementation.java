@@ -40,25 +40,26 @@ public class ChildDAOImplementation implements ChildDAO{
         }
 */
 
-        public void insertRecord(Child child) {
 
-            //String sql = "INSERT INTO Child (id, Name, Age) VALUES (" + c.getId() + ", \"" + c.getName() + "\"," + c.getAge() + ")";
-            String sql = "INSERT INTO Child (id, fullName, ageMonth) VALUES (" + child.getId() + ",     \"" + child.getFullName() + "\"," + child.getAgeMonth() + ")";
-            jdbcOperations.update(sql);
-            //System.out.println("Created Record ID is = " +child.getId() +" Name is: " + child.getFullName());
-            return;
-        }
+    public void insertRecord(Child child) {
+
+        String sql = "INSERT INTO Child (id, fullName, ageMonth) VALUES (" + child.getId() + ",     \"" + child.getFullName() + "\"," + child.getAgeMonth() + ")";
+        jdbcOperations.update(sql);
+        //System.out.println("Created Record ID is = " +child.getId() +" Name is: " + child.getFullName());
+        return;
+    }
 
 
         public Child findChildById(int id) {
 
-            String SQL = "select * from Child where id = 1";
+            String SQL = "select * from Child where id = ?";
             //Child child = (Child) jdbcTemplateObject.queryForObject(SQL, new Object[]{id}, new ChildMapper());
             Child child = (Child) jdbcOperations.queryForObject(SQL, new Object[]{id}, new ChildMapper());
 
             return child;
 
         }
+
 
         public Child findChildByName(String fullName) {
 
@@ -96,9 +97,9 @@ public class ChildDAOImplementation implements ChildDAO{
 
         public void deleteRecord(int id) {
 
-            String SQL = "delete from Child where id = 2";
-            //jdbcTemplateObject.update(SQL);
-            jdbcOperations.update(SQL);
+            String SQL = "delete from Child where id = ?";
+            //jdbcTemplateObject.update(SQL); --> NOT WORKING
+            jdbcOperations.update(SQL, id);
 
             System.out.println("Deleted Record with ID = " + id );
             return;
@@ -107,13 +108,13 @@ public class ChildDAOImplementation implements ChildDAO{
 
         public void updateRecord(int id, int ageMonth){
 
-            //Sample --> String SQL = "SELECT * from Child WHERE fullName = ?";
-            //Old   -->  String SQL = "update Child set ageMonth = 11 where id = 16";
             String SQL = "update Child set ageMonth = ? where id = ?";
-            //String sql = "INSERT INTO Child (id, fullName, ageMonth) VALUES (" + child.getId() + ",     \"" + child.getFullName() + "\"," + child.getAgeMonth() + ")";
 
-            //jdbcTemplateObject.update(SQL);
-            jdbcOperations.update(SQL);
+            String updateQuery = "update Student set age = ? where id = ?";
+            //jdbcTemplateObject.update(updateQuery, age, id);
+
+            //jdbcTemplateObject.update(SQL); --> NOT WORKING
+            jdbcOperations.update(SQL, ageMonth, id);
             //System.out.println("Updated Record with ID = " + id );
             return;
         }
