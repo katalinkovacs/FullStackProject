@@ -12,6 +12,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
+import java.util.List;
+
 import static junit.framework.TestCase.assertNotNull;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
@@ -27,7 +29,7 @@ public class DaoTest {
 
     @Ignore  // WORKING
     @Test  //insertRecord
-    public void childDAO_insertRecord_test() throws Exception{
+    public void childDAO_insertRecord_test() throws Exception {
 
         System.out.println("In the method-------------------------------------");
         Child c = new Child();
@@ -47,13 +49,13 @@ public class DaoTest {
 
         System.out.println("Before IF-------------------------------------");
 
-        if ("Test".equals(c2.getFullName())){
+        if ("Test".equals(c2.getFullName())) {
             System.out.println("In IF-------------------------------------");
 
             System.out.println("OK");
         }
 
-        assert("Test".equals(c2.getFullName()));
+        assert ("Test".equals(c2.getFullName()));
 
         System.out.println("Delete record starts------------");
         childDAOImplementation.deleteRecord(12);
@@ -61,22 +63,22 @@ public class DaoTest {
     }
 
 
-   // @Ignore  // WORKING
+    @Ignore  // WORKING
     @Test  // findChildById
-    public void childDAO_findChildById_test() throws Exception{
+    public void childDAO_findChildById_test() throws Exception {
 
         System.out.println("In method------------");
 
         Child c2 = childDAOImplementation.findChildById(2);
         System.out.println("c2 created------------");
 
-        assert("Reid".equals(c2.getFullName()));
+        assert ("Reid".equals(c2.getFullName()));
 
     }
 
     @Ignore  // WORKING
     @Test      // findChildByName
-    public void childDAO_findChildByName_test() throws Exception{
+    public void childDAO_findChildByName_test() throws Exception {
 
         System.out.println("In method------------");
 
@@ -84,13 +86,13 @@ public class DaoTest {
         System.out.println("child created------------");
 
         //assert("42".equals(c.getId()));
-        assertEquals( (c.getId()), 1);
+        assertEquals((c.getId()), 1);
     }
 
 
     @Ignore    // Not working!!!!!!!!!!!!!!
     @Test      // deleteRecord
-    public void childDAO_deleteRecord_test() throws Exception{
+    public void childDAO_deleteRecord_test() throws Exception {
 
         System.out.println("In the method-------------------------------------");
         Child c = new Child();
@@ -121,17 +123,22 @@ public class DaoTest {
 
     }
 
+    //working
+    @Test  // listAllChildren
+    public void childDAO_listAllChildren_test() throws Exception {
 
+        List<Child> childrenList = childDAOImplementation.listAllChildren();
 
-    @Ignore  // NOT FINISHED!!!!!!!!!!!!
-    @Test  // findChildById
-    public void childDAO_listAllChildren_test() throws Exception{
+        System.out.println("Looping through ChildrenList:");
+        for (Child currentChild : childrenList) {
+            System.out.println("ID is: " + currentChild.getId() + ", Name is: " + currentChild.getFullName() + ", Age is: " + currentChild.getAgeMonth() + " months");
+        }
 
-
+        //assertEquals(expected, actual);
+        assertEquals(11, childrenList.size());
 
     }
 
 
-
-
 }
+
