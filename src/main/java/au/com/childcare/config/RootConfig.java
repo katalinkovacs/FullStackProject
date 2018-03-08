@@ -1,9 +1,7 @@
 package au.com.childcare.config;
 
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.FilterType;
-import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.*;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.type.filter.RegexPatternTypeFilter;
 
 import java.util.regex.Pattern;
@@ -18,6 +16,7 @@ import java.util.regex.Pattern;
         })
 
 // It will not scan the web package that SCANS THE CONTROLLERS!!!!!!
+@PropertySource("classpath:application.properties")
 public class RootConfig {
 
     public static class WebPackage extends RegexPatternTypeFilter {
@@ -27,9 +26,12 @@ public class RootConfig {
 
             super(Pattern.compile("co/fullstack/web"));
             System.out.print("In RootConfig CLASS - WebPackage METHOD *****************");
-
-
         }
+    }
+
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer myProperties() {
+        return new PropertySourcesPlaceholderConfigurer();
     }
 
 }
